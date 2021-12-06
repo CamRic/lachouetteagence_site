@@ -1,0 +1,1 @@
+focus: 2px dotted gray
