@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -14,7 +15,7 @@ button {
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: underline;
     cursor: pointer;
 }
 
@@ -140,7 +141,7 @@ a:hover {
 .d-bloc .navbar a:hover,
 .d-bloc .navbar-brand:hover,
 .d-bloc a:hover .icon-sm,
-.d-bloc a:hover .icon-md,
+.d-bloc a:hover .icon-md, .d-bloc a:focus .icon-md,
 .d-bloc a:hover .icon-lg,
 .d-bloc a:hover .icon-xl,
 .d-bloc h1 a:hover,
@@ -152,6 +153,8 @@ a:hover {
 .d-bloc p a:hover {
     color: rgba(255, 255, 255, 1);
 }
+
+.navbar-brand:focus {background: lightgray;}
 
 .d-bloc .navbar-toggle .icon-bar {
     background: rgba(255, 255, 255, 1);
@@ -554,7 +557,7 @@ a[data-lightbox]:hover::before {
     -webkit-transform: translateY(-50%);
 }
 
-a[data-lightbox]:hover img {
+a[data-lightbox]:hover img,  a[data-lightbox]:focus img{
     opacity: 0.6;
     -webkit-animation-fill-mode: none;
     animation-fill-mode: none;
@@ -722,9 +725,11 @@ h3 {
     box-shadow: 0px 0px 0px #000000;
 }
 
+/*
 h1 {
     color: #333333!important;
 }
+*/
 
 h4 {
     color: #333333!important;
@@ -788,11 +793,16 @@ h4 {
     color: #FFFFFF!important;
 }
 
+.btn-atomic-tangerine:focus {
+    background: #c27956!important;
+    color: #FFFFFF!important;
+}
+
 .ltc-white {
     color: #FFFFFF!important;
 }
 
-.ltc-white:hover {
+.ltc-white:hover, .ltc-white:focus {
     color: #cccccc!important;
 }
 
@@ -822,7 +832,7 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -848,13 +858,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -873,8 +883,9 @@ h4 {
         position: relative;
     }
     .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+        padding-left: env(safe-area-inset-left);
+        padding-left: cons;
+        padding-right: env(safe-area-inset-right);
     }
     .bloc-group,
     .bloc-group .bloc {
@@ -884,8 +895,8 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
     }
 }
 
