@@ -4,3 +4,9 @@ error w3s validation cons(safe-area-inset-left)
 
 resize + compress logo.png 100*100
 resize + compress la-chouette-agence.png 214.45*40
+resize + compress 
+compress image-de-presentation.jpg texture-paper.png (la-chouette-agence-banniere.jpg) projet-site-mariage.jpg projet-site-voyage.jpg
+
+?favicon.jpg > png
+
+minifi css + js
