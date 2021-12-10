@@ -1,1 +1,6 @@
 + metadonnees rs
+
+error w3s validation cons(safe-area-inset-left)
+
+resize + compress logo.png 100*100
+resize + compress la-chouette-agence.png 214.45*40
