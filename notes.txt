@@ -6,3 +6,5 @@ error w3s validation cons(safe-area-inset-left)
 ?favicon.jpg > png
 
 minifi css + js
+
+perf : before change: 639ms Fully Loaded Time, Total Page Size - 812KB, Total Page Requests - 23
